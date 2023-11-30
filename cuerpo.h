@@ -1,16 +1,11 @@
 #ifndef CUERPO_H
 #define CUERPO_H
 #include <math.h>
-#include <QGraphicsItem>
-#include <QPainter>
-#include <QRandomGenerator>
 
-class cuerpo : public QGraphicsItem
+class cuerpo
 {
     double pX, pY, velX, velY, m, r, aX, aY, a;
     double tiempo = 1;
-    double escR = 0.1;
-    double escP = 0.025;
 public:
     cuerpo();
     cuerpo(double, double, double, double, double, double);
@@ -25,8 +20,6 @@ public:
     void setAX(double newAX);
     double getAY() const;
     void setAY(double newAY);
-    QRectF boundingRect() const;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr);
 };
 
 #endif // CUERPO_H
